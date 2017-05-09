@@ -11,9 +11,9 @@
 	<body>
 		<div class = "container">
 		
-			<label>Todas las instituciones</label>
+			<h3>Todas las instituciones</h3>
 
-			<table>
+			<table class="table table-striped">
 				<thead><tr ><th>Nombre</th><th>Nivel</th><th>Orientacion</th><th></th></tr></thead>
 				<tbody>
 				<c:forEach items="${lista}" var="inst" varStatus="count">					

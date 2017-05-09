@@ -23,12 +23,13 @@ public class ControladorLogin {
 
 		ModelMap modelo = new ModelMap();
 		Usuario usuario = new Usuario();
+		// usuario.setEmail("pepe@pepe.com");
 		modelo.put("usuario", usuario);
 		return new ModelAndView("login", modelo);
 	}
 
 	@RequestMapping(path = "/validar-login", method = RequestMethod.POST)
-	public ModelAndView validarLogin(@ModelAttribute("usuario") Usuario usuario) {
+	public ModelAndView validarLogin(@ModelAttribute("usuario") Usuario usuario) { //usuario parametro que recibo del form es del tipo usuario
 		ModelMap model = new ModelMap();
 
 		if (servicioLogin.consultarUsuario(usuario) != null) {

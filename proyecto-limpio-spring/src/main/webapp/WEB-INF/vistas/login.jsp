@@ -1,4 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> <!-- Manejo de form en sprin -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@
 				<form:form action="validar-login" method="POST" modelAttribute="usuario">      
 			    	<h3 class="form-signin-heading">Taller Web I</h3>
 					<hr class="colorgraph"><br>
-					
+					<!-- modelAttribute sprin espera un new model.put // es decor el objeto que quiero bindiar  -->
 					<form:input path="email" id="email" type="email" class="form-control" />
 					<form:input path="password" type="password" id="password" class="form-control"/>     		  
 					

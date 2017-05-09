@@ -27,8 +27,14 @@ public class ControladorInstitucion {
 	 modelo.put("lista", instituciones);
 	 return new ModelAndView("mostrar-lista", modelo);
 	 }
-	
-	//Ejemplos de clase
+	 
+	 
+	//Temas clase 04/05  
+	 // <form:form		// buscar singleton
+	 // Que seria JSTL?? --> Aprender
+	 // Implementar singleton // llamarlo --> 
+	 
+	//Ejemplos de clase Anterior 27/04
 	// cntrol shift o
 	// cntrol espacio
 	//Metodo buscar instituciones Lista
