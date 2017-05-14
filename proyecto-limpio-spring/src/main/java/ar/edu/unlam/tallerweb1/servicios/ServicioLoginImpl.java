@@ -9,8 +9,8 @@ import ar.edu.unlam.tallerweb1.dao.UsuarioDao;
 import ar.edu.unlam.tallerweb1.modelo.Usuario;
 
 
-@Service("servicioLogin")
-@Transactional
+@Service("servicioLogin") // nombre del servicio
+@Transactional // ejecucion atomica
 public class ServicioLoginImpl implements ServicioLogin {
 
 	@Inject
