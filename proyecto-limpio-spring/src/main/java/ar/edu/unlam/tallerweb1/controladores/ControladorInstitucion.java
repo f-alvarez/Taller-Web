@@ -6,8 +6,10 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import ar.edu.unlam.tallerweb1.modelo.Institucion;
@@ -36,6 +38,31 @@ public class ControladorInstitucion {
 		 return new ModelAndView("mostrar-lista", modelo);
 	}
 	
+	@RequestMapping(path = "/preinscripcion", method = RequestMethod.GET)
+	public ModelAndView irAPreInscripcion() {
+		return new ModelAndView("preinscripcion");
+	}
+
+	/*
+	@RequestMapping(path = "/validar-preinscripto", method = RequestMethod.POST)
+	public ModelAndView validarPreInscrip(@ModelAttribute("preInscripto") PreInscripto preinscrip) { //usuario parametro que recibo del form es del tipo usuario
+		ModelMap model = new ModelMap();
+
+		return new ModelAndView("formPreInscrip", model);
+	}
+	*/
+	
+	@RequestMapping(path = "/hoteles/{hotel}")
+	public ModelAndView mostrarHoteles(@RequestParam("ho") String h) {
+		// public ModelAndView saludoInicial(@PathVariable("nombre") String
+		// nombre) {
+		String stringMensaje = "Su hotel elegido es " + h + "gracias";
+
+		ModelMap mod = new ModelMap();
+
+		mod.put("messageAMostrar", stringMensaje);
+		return new ModelAndView("mostrar-lista", mod);
+	} // http://localhost:8080/proyecto-limpio-spring/hoteles/hotel?ho=hotelelnuevo
 /*	
 	 @RequestMapping("/mostrar-lista")
 	 public ModelAndView irAInstitucion() {
